@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "kubernetes" {
-  config_path = "~/.kube/config"
+  config_path = "${path.module}/config"
 }
 resource "kubernetes_namespace" "test" {
   metadata {

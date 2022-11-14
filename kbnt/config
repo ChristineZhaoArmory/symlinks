@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Config
+clusters:
+  - name: nginx
+    cluster:
+      server: https://1CA4B85288B7A199D54ED899B23EB3BC.sk1.us-east-2.eks.amazonaws.com
+      certificate-authority-data: L=
+      insecure-skip-tls-verify: false
+users:
+  - name: nginx
+    user:
+      exec:
+        apiVersion: client.authentication.k8s.io/v1alpha1
+        args:
+          - --region
+          - us-east-2
+          - eks
+          - get-token
+          - --cluster-name
+          - aws-spin-support
+        command: aws
+        env:
+          - name: AWS_PROFILE
+            value: nginx
+        interactiveMode: IfAvailable
+        provideClusterInfo: false
+contexts:
+  - name: nginx
+    context:
+      cluster: arn:aws:eks:us-east-2:810711266228:cluster/aws-spin-support
+      name: nginx
+      user: nginx
+      namespace: nginx
+preferences: {}
+current-context: nginx
