@@ -1,0 +1,40 @@
+{
+  "keepWaitingPipelines": false,
+  "lastModifiedBy": "anonymous",
+  "limitConcurrent": true,
+  "schema": "1",
+  "spelEvaluator": "v4",
+  "stages": [
+    {
+      "account": "spinnaker",
+      "cloudProvider": "kubernetes",
+      "manifestArtifact": {
+        "artifactAccount": "github",
+        "id": "f69dd1e6-0610-45e7-ab5a-a3c2fb4c7d91",
+        "name": "deploy/sym-nginx-deployment.yaml",
+        "reference": "https://api.github.com/repos/ChristineZhaoArmory/symlinks/contents/deploy/sym-nginx-deployment.yaml",
+        "type": "github/file",
+        "version": "main"
+      },
+      "moniker": {
+        "app": "bob-30889"
+      },
+      "name": "Deploy (Manifest) sym",
+      "namespaceOverride": "christine-demo",
+      "refId": "1",
+      "requisiteStageRefIds": [],
+      "skipExpressionEvaluation": true,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false,
+          "services": []
+        }
+      },
+      "type": "deployManifest"
+    }
+  ],
+  "triggers": [],
+  "updateTs": "1670891698000"
+}
