@@ -1,0 +1,51 @@
+{
+  "keepWaitingPipelines": false,
+  "lastModifiedBy": "anonymous",
+  "limitConcurrent": true,
+  "schema": "1",
+  "spelEvaluator": "v4",
+  "stages": [
+    {
+      "expectedArtifacts": [
+        {
+          "defaultArtifact": {
+            "customKind": true,
+            "id": "42231e03-1b2d-4015-939b-006da3c9b342"
+          },
+          "displayName": "dry-fly-62",
+          "id": "60454f7c-5341-48f8-8561-5bb74af94785",
+          "matchArtifact": {
+            "artifactAccount": "embedded-artifact",
+            "customKind": false,
+            "id": "be58e4c2-0b49-492d-97ed-0faad73fc268",
+            "type": "embedded/base64"
+          },
+          "useDefaultArtifact": false,
+          "usePriorArtifact": false
+        }
+      ],
+      "inputArtifact": {
+        "account": "gitrepo",
+        "artifact": {
+          "artifactAccount": "gitrepo",
+          "customKind": true,
+          "id": "49ed9e87-de3f-4010-9656-73bcc5d3ddb8",
+          "location": "bar",
+          "reference": "https://github.com/ChristineZhaoArmory/symlinks",
+          "type": "git/repo",
+          "version": "main"
+        }
+      },
+      "inputArtifacts": null,
+      "kustomizeFilePath": "bar/kustomization.yaml",
+      "name": "Bake (Manifest) KUSTOMIZE sym",
+      "overrides": {},
+      "refId": "1",
+      "requisiteStageRefIds": [],
+      "templateRenderer": "KUSTOMIZE",
+      "type": "bakeManifest"
+    }
+  ],
+  "triggers": [],
+  "updateTs": "1670893777000"
+}
