@@ -1,0 +1,54 @@
+{
+  "keepWaitingPipelines": false,
+  "lastModifiedBy": "anonymous",
+  "limitConcurrent": true,
+  "schema": "1",
+  "spelEvaluator": "v4",
+  "stages": [
+    {
+      "expectedArtifacts": [
+        {
+          "defaultArtifact": {
+            "customKind": true,
+            "id": "af727894-8eba-4329-a76c-c7654f55800a"
+          },
+          "displayName": "purple-puma-22",
+          "id": "60b91700-ab82-48cb-9bbf-c0de6ef97b36",
+          "matchArtifact": {
+            "artifactAccount": "embedded-artifact",
+            "customKind": false,
+            "id": "964fd7a3-e807-48ab-892b-d04ec254ab53",
+            "name": "test",
+            "type": "embedded/base64"
+          },
+          "useDefaultArtifact": false,
+          "usePriorArtifact": false
+        }
+      ],
+      "helmChartFilePath": "helm/sym-4390-1-0.1.0.tgz",
+      "inputArtifacts": [
+        {
+          "account": "gitrepo",
+          "artifact": {
+            "artifactAccount": "gitrepo",
+            "id": "85c5564d-7e7b-49ec-b5bf-76ab8e06c3db",
+            "location": "helm",
+            "reference": "https://github.com/ChristineZhaoArmory/symlinks",
+            "type": "git/repo",
+            "version": "main"
+          }
+        }
+      ],
+      "name": "Bake (Manifest)",
+      "namespace": "christine-demo",
+      "outputName": "test",
+      "overrides": {},
+      "refId": "1",
+      "requisiteStageRefIds": [],
+      "templateRenderer": "HELM3",
+      "type": "bakeManifest"
+    }
+  ],
+  "triggers": [],
+  "updateTs": "1670893262000"
+}
